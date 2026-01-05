@@ -42,7 +42,7 @@ int main() {
   printf("Digite o PIB: ");
   scanf("%Lf", &PIB_1);
 
-    printf("------------------------------- \n");
+  printf("------------------------------- \n");
 
   printf("Digite uma letra para o Estado 2 (A-H): ");
   scanf(" %c", &estado_2);
@@ -67,7 +67,7 @@ int main() {
 
   printf("========================================\n");
 
-   // Área para cálculo de densidade  populacional e PIB per capita
+   // Área para cálculo de densidade populacional e PIB per capita
   float densidade_1 = (float)populacao_1 / area_1;
   long double percapita_1 = (double)PIB_1 / populacao_1;
 
@@ -90,6 +90,7 @@ int main() {
   printf("Estado: %c\n Código: %s\n Cidade: %s\n ", estado_1, codigo_1, cidade_1);
   printf("População: %lu\n Pontos Turísticos: %d\n Área: %.3f\n PIB: %.2Lf\n", populacao_1, turismo_1, area_1, PIB_1);
   printf("Densidade Populacional: %.2f\n PIB per Capita: %.2Lf\n", densidade_1, percapita_1);
+  printf("Super Poder: %.2Lf\n", super_1);
 
   printf("-------------------------------\n");
 
@@ -97,6 +98,16 @@ int main() {
   printf("Estado: %c\n Código: %s\n Cidade: %s\n ", estado_2, codigo_2, cidade_2);
   printf("População: %lu\n Pontos Turísticos: %d\n Área: %.3f\n PIB: %.2Lf\n", populacao_2, turismo_2, area_2, PIB_2);
   printf("Densidade Populacional: %.2f\n PIB per Capita: %.2Lf\n", densidade_2, percapita_2);
+  printf("Super Poder: %.2Lf\n", super_2);
+
+  printf("============================================\n");
+
+  // Área para comparação das cartas
+  printf("Comparação das Cartas (Carta 1 = 1 e Carta 2 = 0):\n");
+  printf("População: %d\n Pontos Turísticos: %d\n Área: %d\n PIB: %d\n", populacao_1 > populacao_2, turismo_1 > turismo_2, area_1 > area_2, PIB_1 > PIB_2);
+  printf("Densidade Populacional: %d\n PIB per Capita: %d\n", densidade_1 < densidade_2, percapita_1 > percapita_2);
+  printf("Super Poder: %d", super_1 > super_2);
+
 
 return 0;
 } 
