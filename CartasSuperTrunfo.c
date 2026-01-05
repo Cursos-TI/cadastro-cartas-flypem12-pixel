@@ -67,16 +67,36 @@ int main() {
 
   printf("========================================\n");
 
+   // Área para cálculo de densidade  populacional e PIB per capita
+  float densidade_1 = (float)populacao_1 / area_1;
+  long double percapita_1 = (double)PIB_1 / populacao_1;
+
+  float densidade_2 = (float)populacao_2 / area_2;
+  long double percapita_2 = (double)PIB_2 / populacao_2;
+
+  // Área para cálculo do Super poder e inverso da densidade
+  double inverdensidade_1, inverdensidade_2;
+
+  inverdensidade_1 = (float)area_1 / populacao_1;
+  inverdensidade_2 = (float)area_2 / populacao_2;
+
+  long double super_1, super_2;
+
+  super_1 = (long double)populacao_1 + turismo_1 + area_1 + PIB_1 + inverdensidade_1 + percapita_1;
+  super_2 = (long double)populacao_2 + turismo_2 + area_2 + PIB_2 + inverdensidade_2 + percapita_2;
+
   // Área para exibição dos dados da cidade
   printf("Carta 1:\n");
   printf("Estado: %c\n Código: %s\n Cidade: %s\n ", estado_1, codigo_1, cidade_1);
   printf("População: %lu\n Pontos Turísticos: %d\n Área: %.3f\n PIB: %.2Lf\n", populacao_1, turismo_1, area_1, PIB_1);
+  printf("Densidade Populacional: %.2f\n PIB per Capita: %.2Lf\n", densidade_1, percapita_1);
 
   printf("-------------------------------\n");
 
   printf("Carta 2:\n");
   printf("Estado: %c\n Código: %s\n Cidade: %s\n ", estado_2, codigo_2, cidade_2);
   printf("População: %lu\n Pontos Turísticos: %d\n Área: %.3f\n PIB: %.2Lf\n", populacao_2, turismo_2, area_2, PIB_2);
-  
+  printf("Densidade Populacional: %.2f\n PIB per Capita: %.2Lf\n", densidade_2, percapita_2);
+
 return 0;
 } 
